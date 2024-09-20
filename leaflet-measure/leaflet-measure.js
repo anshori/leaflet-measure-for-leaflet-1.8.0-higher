@@ -2096,7 +2096,7 @@
   },
   function (e, t, r) {
     e.exports =
-      '<a class="{{ model.className }}-toggle js-toggle" href=# title="Pengukuran Jarak dan Luas">Measure</a> <div class="{{ model.className }}-interaction js-interaction"> <div class="js-startprompt startprompt"> <h6>Pengukuran Jarak dan Luas</h6> <ul class=tasks> <a href=# class="js-start start">Buat pengukuran baru</a> </ul> </div> <div class=js-measuringprompt> <h6>Pengukuran panjang dan luasan</h6> <p class=js-starthelp>Mulai lakukan pengukuran dengan menambahkan titik pada peta</p> <div class="js-results results"></div> <ul class="js-measuretasks tasks"> <li><a href=# class="js-cancel cancel">Batal</a></li> <li><a href=# class="js-finish finish">Selesaikan pengukuran</a></li> </ul> </div> </div> ';
+      '<a class="{{ model.className }}-toggle js-toggle" href=# title="Pengukuran Jarak dan Luas">Measure</a> <div class="{{ model.className }}-interaction js-interaction"> <div class="js-startprompt startprompt"> <h3>Pengukuran Jarak dan Luas</h3> <ul class=tasks> <a href=# class="js-start start">Buat pengukuran baru</a> </ul> </div> <div class=js-measuringprompt> <h3>Pengukuran panjang dan luasan</h3> <p class=js-starthelp>Mulai lakukan pengukuran dengan menambahkan titik pada peta</p> <div class="js-results results"></div> <ul class="js-measuretasks tasks"> <li><a href=# class="js-cancel cancel">Batal</a></li> <li><a href=# class="js-finish finish">Selesaikan pengukuran</a></li> </ul> </div> </div> ';
   },
   function (e, t, r) {
     e.exports =
@@ -2108,10 +2108,10 @@
   },
   function (e, t, r) {
     e.exports =
-      '<h6>Pengukuran Jarak</h6> <p>{{ model.lengthDisplay }}</p> <ul class=tasks> <li><a href=# class="js-zoomto zoomto">Pusatkan pada garis ini</a></li> <li><a href=# class="js-deletemarkup deletemarkup">Hapus</a></li> </ul> ';
+      '<h3>Pengukuran Jarak</h3> <p>{{ model.lengthDisplay }}</p> <ul class=tasks> <li><a href=# class="js-zoomto zoomto">Pusatkan pada garis ini</a></li> <li><a href=# class="js-deletemarkup deletemarkup">Hapus</a></li> </ul> ';
   },
   function (e, t, r) {
     e.exports =
-      '<h6>Pengukuran Luas</h6> <p>{{ model.areaDisplay }}</p> <p>{{ model.lengthDisplay }} Keliling</p> <ul class=tasks> <li><a href=# class="js-zoomto zoomto">Pusatkan pada area ini</a></li> <li><a href=# class="js-deletemarkup deletemarkup">Hapus</a></li> </ul> ';
+      '<h3>Pengukuran Luas</h3> <p>{{ model.areaDisplay }}</p> <p>{{ model.lengthDisplay }} Keliling</p> <ul class=tasks> <li><a href=# class="js-zoomto zoomto">Pusatkan pada area ini</a></li> <li><a href=# class="js-deletemarkup deletemarkup">Hapus</a></li> </ul> ';
   },
 ]);

@@ -3,4 +3,4 @@ This repository contains a bug fix for the leaflet measure plugin [https://githu
 
 
 ### Demo
-[https://wisnubakso.github.io/leaflet-measure-for-leaflet-1.8.0-higher/](https://wisnubakso.github.io/leaflet-measure-for-leaflet-1.8.0-higher/)
+[https://wisnubakso.github.io/leaflet-measure-for-leaflet-1.8.0-higher-patch-1/](https://wisnubakso.github.io/leaflet-measure-for-leaflet-1.8.0-higher-patch-1/)

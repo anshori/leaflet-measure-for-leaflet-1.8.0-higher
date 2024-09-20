@@ -1,56 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="unsorry" />
+    <title>Leaflet Measure</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="leaflet-measure/leaflet-measure.css" />
+    <script src="leaflet-measure/leaflet-measure.js"></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 600px;
+      }
+      h4 {
+        text-align: center;
+      }
+    </style>
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="unsorry">
-	<title>Leaflet Measure</title>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-	<link rel="stylesheet" href="leaflet-measure/leaflet-measure.css">
-	<style>
-		#map {
-			width: 100%;
-			height: 600px;
-		}
-		h4 {
-			text-align: center;
-		}
-	</style>
-</head>
+  <body>
+    <div id="map"></div>
+    <h4>
+      <a
+        href="https://github.com/wisnubakso/leaflet-measure-for-leaflet-1.8.0-higher-patch-1.git"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Source Code</a
+      >
+    </h4>
 
-<body>
-	<div id="map"></div>
-	<h4><a href="https://github.com/anshori/leaflet-measure-for-leaflet-1.8.0-higher" target="_blank" rel="noopener noreferrer">Source Code</a></h4>
+    <script>
+      // Init map
+      var latitude = -2.61119;
+      var longitude = 118.65234;
+      var zoom = 5;
+      var map = L.map("map").setView([latitude, longitude], zoom);
 
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-	<script src="leaflet-measure/leaflet-measure.js"></script>
+      // Base layer
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> | <a href="https://github.com/wisnubakso" target="_blank">WisnuBakso@2024</a>',
+      }).addTo(map);
 
-	<script>
-		// Init map
-		var latitude = -2.61119;
-		var longitude = 118.65234;
-		var zoom = 5;
-		var map = L.map('map').setView([latitude, longitude], zoom);
-
-		// Base layer
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '© OpenStreetMap contributors'
-		}).addTo(map);
-
-		// measure
-		var measureControl = new L.Control.Measure({
-			primaryLengthUnit: 'meters',
-			secondaryLengthUnit: 'kilometers',
-			primaryAreaUnit: 'hectares',
-			secondaryAreaUnit: 'sqmeters',
-			activeColor: 'green',
-			completedColor: 'blue'
-		});
-		measureControl.addTo(map);
-	</script>
-</body>
-
+      // measure
+      var measureControl = new L.Control.Measure({
+        primaryLengthUnit: "meters",
+        secondaryLengthUnit: "kilometers",
+        primaryAreaUnit: "hectares",
+        secondaryAreaUnit: "sqmeters",
+        activeColor: "green",
+        completedColor: "blue",
+      });
+      measureControl.addTo(map);
+    </script>
+  </body>
 </html>
